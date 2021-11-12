@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+
+  pythonService:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        userid: 1001
+        groupid: 1002
+    image: python_image:latest
+    restart: "no"
+    container_name: pythontest
